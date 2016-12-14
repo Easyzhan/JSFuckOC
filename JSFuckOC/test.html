@@ -1,78 +1,161 @@
- <html>
-     <head>
-            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-             <title>Vizard就是戦大爷</title>
-     </head>
-    
-     <script type="text/javascript">
+<!DOCTYPE html>
+
+<html mani-no-fest="cache.manifest">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1,minimum-size=1,maximum-size=1,user-scalable=no" charset="utf-8" />
+        <title>设置</title>
         
-             function JSCallOc1(){
+        <link href="/saint/resources/lib/bootstrap/bootstrap.min.css" rel="stylesheet" media="screen" />
+        <link href="/saint/resources/tqzs/css/common/crm-base.css" rel="stylesheet" media="screen" />
+        <link href="/saint/resources/tqzs/css/common/crm-module.css" rel="stylesheet" />
+        <link href="/saint/resources/tqzs/css/common/crm-icon.css" rel="stylesheet" />
+        <link href="/saint/resources/tqzs/css/private/setting.css" rel="stylesheet" media="screen" />
         
-<!--                 carInfo();-->
-legendJS.showAddCar();
-             }
-     function JSCallOcDismissVc(){
-<!--         disMissVc();-->
-//用对象的方式调用方法
-        legendJS.disMissVc();
-     }
-        function JSCallOc2(){
-             test2('参数1','参数2我不是戦大爷');
-        }function JSCallOcNav(){
-<!--            test2('0xDC143C','尾款');-->
-<!--        legendJS.setRightActionBarByText('尾款','fenxiang');-->
-legendJS.setRightActionBarByText('尾款','fenxiang');
-        }
-       function aaa(){
-               alert("OC调用了无参数的js方法");
-       }
-       function bbb(name,num){
-               alert(name+num);
-       }
-     function JSCallOcImage(){
-         legendJS.setRightActionButtonByImgUrl('http://10.0.1.221:8080/statics/img/insurance/status-mypolicy.png','传image方法');
-     }
-     function JSCallOcForPay(){
-        legendJS.payByAlipay('201511120981234');
-     }function payResult(str) {
-<!--         asyncAlert(str);-->
-        alert(str);
-         document.getElementById("returnValue").value = str;
-     }
-     function JSCallOcForPic(){
-         legendJS.capture('8808080','whichspot');
-         
-     }
-     function whichspot(resultUploadImage){
-         alert(resultUploadImage);
-         document.getElementById("returnValue").value = resultUploadImage;
-     }
-     function JSCallOcForPhone(){
-         legendJS.callCIA('10000');
-     }
-     function JSCallOcForTimeStamp(){
-         legendJS.getTimeStamp();
-     }
-     
-     
-         </script>
-    
-     <body bgcolor="#005555">
-<!--         <br><br/>-->
-<a></a>
-           <button type="button"  onclick="JSCallOc1()">Native跳转到补充车型信息(无参)</button>
-           <button type="button"  onclick="JSCallOcForPic()">H5要上传皂片</button>
-           <button type="button"  onclick="JSCallOcForPhone()">H5要打电话</button>
-           <p></p>
-           <button type="button"  onclick="JSCallOcDismissVc()">关闭当前Native页面接口(无参)</button>
-           <p></p>
-           <button type="button"  onclick="JSCallOc2()">JS调用OC方法(传参)</button>
-          <p></p>
-           <button type="button"  onclick="JSCallOcNav()">JS调用OC导航栏按钮传入(颜色,文字)</button>
-           <p></p>
-           <button type="button"  onclick="JSCallOcImage()">JS调用OC导航栏按钮传入(图片url)</button>
-           <button type="button"  onclick="JSCallOcForPay()">支付balabala</button>
-           <button type="button"  onclick="JSCallOcForTimeStamp()">获得TimeStamp</button>
-           <textarea id ="returnValue" type="value" rows="2" cols="30">
-         </body>
-     </html>
+        <script type="text/javascript" src="/saint/resources/lib/jquery/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="/saint/resources/lib/bootstrap/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/saint/resources/tqzs/js/common/tqmall-config.js"></script>
+        <script type="text/javascript" src="/saint/resources/tqzs/js/common/tqmallAjax.js"></script>
+        <script type="text/javascript" src="/saint/resources/tqzs/js/common/commonFunction.js"></script>
+        <script type="text/javascript" src="/saint/resources/tqzs/js/person/setting.js"></script>
+        <script type="text/javascript" src="/saint/resources/tqzs/js/common/commonScale.js"></script>
+        <script src="tqmall://localJS/Bridge.js"></script>
+        <script type="text/javascript" src="/saint/resources/tqzs/js/common/tqmall-bridge.js"></script>
+    </head>
+    <body id="wrapper" class="lowlevel-bgc-gray">
+        
+        <input type="hidden" name="issuer" value="https://zs-ssl.tqmall.com/idp/" />
+        <!--<div class="banner-other banner-xs">
+         <span th:text="*{userName}">罗中涛</span>
+         <span th:text="'工号：' + *{staffNo}">工号：000222</span>
+         </div>-->
+        <div>
+            <ul class="list-group">
+                <li class="list-group-item row entry-default-child entry-default-xs">
+                    <!--<a href="javascript:void(0)" th:href="*{haveMultiRoles}?@{/assist/person/role/list}:'javascript:void(0)'">-->
+                    <div class="col-xs-4 ">
+                        <span class="import-font-color  import-list">姓名</span>
+                    </div>
+                    <div class="col-xs-7 text-right">
+                        <span class="weaker-font-color import-list">刘方云</span>
+                    </div>
+                    <!--<div th:if="*{haveMultiRoles}">
+                     <i class="crm-arrow crm-arrow-abso"></i>
+                     </div>
+                     </a>-->
+                </li>
+            </ul>
+        </div>
+        
+        <div>
+            <ul class="list-group">
+                <li class="list-group-item row entry-default-child entry-default-xs">
+                    <div class="col-xs-4 ">
+                        <span class="import-font-color  import-list">工号</span>
+                    </div>
+                    <div class="col-xs-7 text-right">
+                        <span class="weaker-font-color import-list">000488</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+        <div>
+            <ul class="list-group">
+                <li class="list-group-item row entry-default-child entry-default-xs">
+                    <div class="col-xs-3 ">
+                        <span class="import-font-color import-list">所在组织</span>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <span class="weaker-font-color import-list">湖北省/湖北一区</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+        <div>
+            <ul class="list-group">
+                <li class="list-group-item row entry-default-child entry-default-xs">
+                    <a class="tqmallpush-url" href="/saint/assist/person/role/list">
+                        <div class="col-xs-4 ">
+                            <span class="import-font-color import-list">当前角色</span>
+                        </div>
+                        <div class="col-xs-7 text-right">
+                            <span class="weaker-font-color import-list">直销区长</span>
+                        </div>
+                        <div>
+                            <i class="crm-arrow crm-arrow-abso"></i>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+        <div>
+            <ul class="list-group">
+                <li class="list-group-item row entry-default-child entry-default-xs">
+                    <a class="tqmallpush-url" href="/saint/tqzs/user/queryUser">
+                        <div class="col-xs-11 ">
+                            <span class="import-font-color import-list">邀请组员</span>
+                        </div>
+                        <div>
+                            <i class="crm-arrow crm-arrow-abso"></i>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+        <ul class="list-group">
+            <li class="list-group-item row entry-default-child entry-default-xs">
+                <a class="tqmallpush-url" href="/saint/assist/attendance/list">
+                    <div class="col-xs-11 ">
+                        <span class="import-font-color import-list">考勤签到</span>
+                    </div>
+                    <i class="crm-arrow crm-arrow-abso"></i>
+                </a>
+            </li>
+        </ul>
+        
+        <div>
+            <ul class="list-group">
+                <li class="list-group-item row entry-default-child entry-default-xs">
+                    <a id="versionLink" href="javascript:void(0)">
+                        <div class="col-xs-7 ">
+                            <span id="version" class="import-font-color  import-list">版本2.5</span>
+                        </div>
+                        <div class="col-xs-5 text-center">
+                            <span id="versionDescription" class="weaker-font-color import-list">已是最新版本</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+        <div id="logout">
+            <ul class="list-group">
+                <li class="esc list-group-item row entry-default-child entry-default-xs">
+                    <a href="javascript:void(0)">
+                        <div class="col-xs-12 text-center">
+                            <span class="import-font-color  import-list orange-red-font-color">退出登录</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+        <div>
+            <script>
+                var _hmt = _hmt || [];
+                (function() {
+                 var hm = document.createElement("script");
+                 hm.src = "//hm.baidu.com/hm.js?dd7bb7935495f327547feff851dfd935";
+                 var s = document.getElementsByTagName("script")[0];
+                 s.parentNode.insertBefore(hm, s);
+                 })();
+                </script>
+        </div></body>
+    <script>
+        var checkUpdateUrl = '/saint/zs/sys/appCheckUpdate';
+        </script>
+</html>
+

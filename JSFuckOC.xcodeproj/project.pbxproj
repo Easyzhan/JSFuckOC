@@ -42,6 +42,7 @@
 		2CF05A501D8999CE003F1C8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CF05A4F1D8999CE003F1C8D /* Assets.xcassets */; };
 		2CF05A531D8999CE003F1C8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CF05A511D8999CE003F1C8D /* LaunchScreen.storyboard */; };
 		2CF05A5B1D899A29003F1C8D /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = 2CF05A5A1D899A29003F1C8D /* test.html */; };
+		674870DE1E0112C800FBE7AC /* Bridge.js in Resources */ = {isa = PBXBuildFile; fileRef = 674870DD1E0112C800FBE7AC /* Bridge.js */; };
 		AB16113FF6BCB48EEE8F85D6 /* libPods-JSFuckOC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F732F0043746EDB544D63EA /* libPods-JSFuckOC.a */; };
 /* End PBXBuildFile section */
 
@@ -116,6 +117,7 @@
 		2CF05A5A1D899A29003F1C8D /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
 		3F732F0043746EDB544D63EA /* libPods-JSFuckOC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JSFuckOC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FF7068A4895DDCB7F1C9992 /* Pods-JSFuckOC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSFuckOC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JSFuckOC/Pods-JSFuckOC.debug.xcconfig"; sourceTree = "<group>"; };
+		674870DD1E0112C800FBE7AC /* Bridge.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Bridge.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -273,6 +275,7 @@
 		2CF05A431D8999CE003F1C8D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				674870DD1E0112C800FBE7AC /* Bridge.js */,
 				2CF05A441D8999CE003F1C8D /* main.m */,
 			);
 			name = "Supporting Files";
@@ -353,6 +356,7 @@
 				2CF05A531D8999CE003F1C8D /* LaunchScreen.storyboard in Resources */,
 				2CF05A501D8999CE003F1C8D /* Assets.xcassets in Resources */,
 				2CF05A4E1D8999CE003F1C8D /* Main.storyboard in Resources */,
+				674870DE1E0112C800FBE7AC /* Bridge.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

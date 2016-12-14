@@ -164,6 +164,24 @@
 #pragma -mark 传递的是个对象
     self.context[@"legendJS"] = self.legend;
     [self observeJSContext];
+    
+    [UIApplication sharedApplication].networkActivityIndicatorVisible =NO;
+    self.title = [webView stringByEvaluatingJavaScriptFromString:@"document.title"];//获取当前页面的title
+    
+//    self.currentURL = webView.request.URL.absoluteString;
+    NSLog(@"title-%@--url-%@--",self.title,webView.request.URL.absoluteString);
+    
+    NSString *lJs = @"document.documentElement.innerHTML";//获取当前网页的html
+    
+    NSString *currentHTML;
+    currentHTML = [webView stringByEvaluatingJavaScriptFromString:lJs];
+    
+    NSLog(@"----ljs = %@",currentHTML);
+    NSString *str  = @"document.getElementsByClassName('weaker-font-color')[4].innerText = \"吊的飞起\";";
+    [webView stringByEvaluatingJavaScriptFromString:str];
+    
+    NSString *numStr = [NSString stringWithFormat:@"document.getElementById('version').innerText = \"%@\";",@"fucker"];
+    [webView stringByEvaluatingJavaScriptFromString:numStr];
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
