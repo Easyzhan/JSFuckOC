@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Vizard就是戦大爷</title>
+    </head>
+    
+    <script type="text/javascript">
+        
+        function JSCallOc1(){
+            
+            <!--                 carInfo();-->
+            legendJS.showAddCar();
+        }
+    function JSCallOcDismissVc(){
+        <!--         disMissVc();-->
+        //用对象的方式调用方法
+        legendJS.disMissVc();
+    }
+    function JSCallOc2(){
+        test2('参数1','参数2我不是戦大爷');
+    }function JSCallOcNav(){
+        <!--            test2('0xDC143C','尾款');-->
+        <!--        legendJS.setRightActionBarByText('尾款','fenxiang');-->
+        legendJS.setRightActionBarByText('尾款','fenxiang');
+    }
+    function aaa(){
+        alert("OC调用了无参数的js方法");
+    }
+    function bbb(name,num){
+        alert(name+num);
+    }
+    function JSCallOcImage(){
+        legendJS.setRightActionButtonByImgUrl('http://10.0.1.221:8080/statics/img/insurance/status-mypolicy.png','传image方法');
+    }
+    function JSCallOcForPay(){
+        legendJS.payByAlipay('201511120981234');
+    }function payResult(str) {
+        <!--         asyncAlert(str);-->
+        alert(str);
+        document.getElementById("returnValue").value = str;
+    }
+    function JSCallOcForPic(){
+        legendJS.capture('8808080','whichspot');
+        
+    }
+    function whichspot(resultUploadImage){
+        alert(resultUploadImage);
+        document.getElementById("returnValue").value = resultUploadImage;
+    }
+    function JSCallOcForPhone(){
+        legendJS.callCIA('10000');
+    }
+    function JSCallOcForTimeStamp(){
+        legendJS.getTimeStamp();
+    }
+    
+    
+        </script>
+    
+    <body bgcolor="#005555">
+        <!--         <br><br/>-->
+        <a></a>
+        <button type="button"  onclick="JSCallOc1()">Native跳转到补充车型信息(无参)</button>
+        <button type="button"  onclick="JSCallOcForPic()">H5要上传皂片</button>
+        <button type="button"  onclick="JSCallOcForPhone()">H5要打电话</button>
+        <p></p>
+        <button type="button"  onclick="JSCallOcDismissVc()">关闭当前Native页面接口(无参)</button>
+        <p></p>
+        <button type="button"  onclick="JSCallOc2()">JS调用OC方法(传参)</button>
+        <p></p>
+        <button type="button"  onclick="JSCallOcNav()">JS调用OC导航栏按钮传入(颜色,文字)</button>
+        <p></p>
+        <button type="button"  onclick="JSCallOcImage()">JS调用OC导航栏按钮传入(图片url)</button>
+        <button type="button"  onclick="JSCallOcForPay()">支付balabala</button>
+        <button type="button"  onclick="JSCallOcForTimeStamp()">获得TimeStamp</button>
+        <textarea id ="returnValue" type="value" rows="2" cols="30">
+            </body>
+</html>
